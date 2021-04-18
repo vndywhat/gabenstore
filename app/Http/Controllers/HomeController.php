@@ -25,4 +25,9 @@ class HomeController extends Controller
     {
         return view('home.contacts');
     }
+
+    public function jobs()
+    {
+        return view('home.jobs');
+    }
 }
