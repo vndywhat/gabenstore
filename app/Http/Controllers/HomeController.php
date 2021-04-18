@@ -15,4 +15,9 @@ class HomeController extends Controller
     {
         return view('home.company');
     }
+
+    public function support()
+    {
+        return view('home.support');
+    }
 }
