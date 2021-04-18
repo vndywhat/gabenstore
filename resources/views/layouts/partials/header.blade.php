@@ -151,10 +151,10 @@
                             </li>
                             <ul class="b-menu__list b-menu__list-sub">
                                 <li class="b-menu__list-item">
-                                    <a href="/page/company">О компании</a>
+                                    <a href="{{ route('home.company') }}">О компании</a>
                                 </li>
                                 <li class="b-menu__list-item">
-                                    <a href="/page/support">Поддержка</a>
+                                    <a href="{{ route('home.support') }}">Поддержка</a>
                                 </li>
                             </ul>
                         </ul>
