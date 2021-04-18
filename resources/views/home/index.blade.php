@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'GabeStore — магазин игр на ПК')
+
 @section('content')
     <main>
         @include('home.partials.index.slider')

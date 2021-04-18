@@ -42,13 +42,12 @@
     />
     <link href="{{ asset('css/style.css') }}" rel="stylesheet" />
 
-    <title>GabeStore — магазин игр на ПК</title>
+    <title>@yield('title', 'GabeStore — магазин игр на ПК')</title>
 </head>
 
 <body>
 
     <a class="fixed-cart js-cart-icon" href="/basket"></a>
-
 
     @include('layouts.partials.header')
 
