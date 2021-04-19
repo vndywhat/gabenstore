@@ -1,12 +1,57 @@
 language: php
-php:
-  - 7.3
+
+matrix:
+  fast_finish: true
+  include:
+    - php: 7.1
+      env:
+        - DEPENDENCIES=""
+        - TEST_COVERAGE=true
+    - php: 7.1
+      env:
+        - DEPENDENCIES="--prefer-lowest --prefer-stable"
+    - php: 7.2
+      env:
+        - DEPENDENCIES=""
+        - TEST_COVERAGE=true
+    - php: 7.2
+      env:
+        - DEPENDENCIES="--prefer-lowest --prefer-stable"
+    - php: 7.3
+      env:
+        - DEPENDENCIES=""
+        - TEST_COVERAGE=true
+    - php: 7.3
+      env:
+        - DEPENDENCIES="--prefer-lowest --prefer-stable"
+    - php: 7.4
+      env:
+        - DEPENDENCIES=""
+        - TEST_COVERAGE=true
+    - php: 7.4
+      env:
+        - DEPENDENCIES="--prefer-lowest --prefer-stable"
+    - php: 8.0
+      env:
+        - DEPENDENCIES=""
+    - php: 8.0
+      env:
+        - DEPENDENCIES="--prefer-lowest --prefer-stable"
+
+cache:
+  directories:
+    - $HOME/.composer/cache
+    - $HOME/.php-cs-fixer
+    - $HOME/.local
 
 before_script:
-  - composer global require fabpot/php-cs-fixer
-  - composer update
-  - composer install --dev
+  - phpenv config-rm xdebug.ini
+  - composer self-update
+  - composer update --prefer-dist $DEPENDENCIES
 
 script:
-  - phpunit
-  - php php-cs-fixer --diff --dry-run -v fix
+  - if [[ $TEST_COVERAGE == 'true' ]]; then php -dzend_extension=xdebug.so ./vendor/bin/phpunit --coverage-text --coverage-clover ./build/logs/clover.xml; else ./vendor/bin/phpunit; fi
+  - if [[ $TEST_COVERAGE == 'true' ]]; then ./vendor/bin/php-cs-fixer fix -v --diff --dry-run ; fi
+
+after_success:
+  - if [[ $TEST_COVERAGE == 'true' ]]; then php vendor/bin/coveralls -v; fi
