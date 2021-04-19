@@ -16,7 +16,7 @@
                     <div class="b-promo__main-slider-description-item">
                         <div class="b-promo__main-slider-title"> <a href="/game/stellaris-nemesis">Stellaris – Nemesis </a></div>
 
-                        <div class="b-promo__main-slider-container"> <a class="btn btn--primary js-addToCart " href="/basket" data-item-id="3216">В&nbsp;корзину</a> <div class="b-promo__main-slider-price">
+                        <div class="b-promo__main-slider-container"> <a class="btn btn--primary js-addToCart " href="{{ route('basket.index') }}" data-item-id="3216">В&nbsp;корзину</a> <div class="b-promo__main-slider-price">
                                 <div class="b-promo__main-slider-currentprice">5.21 $</div>
                                 <div class="b-promo__main-slider-discount">-10% </div> </div>
                         </div>
@@ -24,7 +24,7 @@
                     <div class="b-promo__main-slider-description-item">
                         <div class="b-promo__main-slider-title"> <a href="/game/borderlands-3-directors-cut-steam">Borderlands 3: Director's Cut (Steam)</a></div>
 
-                        <div class="b-promo__main-slider-container"> <a class="btn btn--primary js-addToCart " href="/basket" data-item-id="3309">В&nbsp;корзину</a> <div class="b-promo__main-slider-price">
+                        <div class="b-promo__main-slider-container"> <a class="btn btn--primary js-addToCart " href="{{ route('basket.index') }}" data-item-id="3309">В&nbsp;корзину</a> <div class="b-promo__main-slider-price">
                                 <div class="b-promo__main-slider-currentprice">8.39 $</div>
                                 <div class="b-promo__main-slider-discount">-10% </div> </div>
                         </div>
@@ -32,7 +32,7 @@
                     <div class="b-promo__main-slider-description-item">
                         <div class="b-promo__main-slider-title"> <a href="/game/doom-eternal-deluxe-edition">DOOM Eternal – Deluxe Edition</a></div>
 
-                        <div class="b-promo__main-slider-container"> <a class="btn btn--primary js-addToCart " href="/basket" data-item-id="2396">В&nbsp;корзину</a> <div class="b-promo__main-slider-price">
+                        <div class="b-promo__main-slider-container"> <a class="btn btn--primary js-addToCart " href="{{ route('basket.index') }}" data-item-id="2396">В&nbsp;корзину</a> <div class="b-promo__main-slider-price">
                                 <div class="b-promo__main-slider-currentprice">12.32 $</div>
                                 <div class="b-promo__main-slider-discount">-67% </div> </div>
                         </div>
@@ -40,7 +40,7 @@
                     <div class="b-promo__main-slider-description-item">
                         <div class="b-promo__main-slider-title"> <a href="/game/insurgency-sandstorm">Insurgency: Sandstorm</a></div>
 
-                        <div class="b-promo__main-slider-container"> <a class="btn btn--primary js-addToCart " href="/basket" data-item-id="3275">В&nbsp;корзину</a> <div class="b-promo__main-slider-price">
+                        <div class="b-promo__main-slider-container"> <a class="btn btn--primary js-addToCart " href="{{ route('basket.index') }}" data-item-id="3275">В&nbsp;корзину</a> <div class="b-promo__main-slider-price">
                                 <div class="b-promo__main-slider-currentprice">7.32 $</div>
                                 <div class="b-promo__main-slider-discount">-45% </div> </div>
                         </div>
@@ -48,7 +48,7 @@
                     <div class="b-promo__main-slider-description-item">
                         <div class="b-promo__main-slider-title"> <a href="/game/evil-genius-2-world-domination">Evil Genius 2: World Domination</a></div>
 
-                        <div class="b-promo__main-slider-container"> <a class="btn btn--primary js-addToCart " href="/basket" data-item-id="3245">В&nbsp;корзину</a> <div class="b-promo__main-slider-price">
+                        <div class="b-promo__main-slider-container"> <a class="btn btn--primary js-addToCart " href="{{ route('basket.index') }}" data-item-id="3245">В&nbsp;корзину</a> <div class="b-promo__main-slider-price">
                                 <div class="b-promo__main-slider-currentprice">8.2 $</div>
                                 <div class="b-promo__main-slider-discount">-15% </div> </div>
                         </div>
@@ -56,7 +56,7 @@
                     <div class="b-promo__main-slider-description-item">
                         <div class="b-promo__main-slider-title"> <a href="/game/horizon-zero-dawn-complete-edition">Horizon Zero Dawn – Complete Edition</a></div>
 
-                        <div class="b-promo__main-slider-container"> <a class="btn btn--primary js-addToCart " href="/basket" data-item-id="2957">В&nbsp;корзину</a> <div class="b-promo__main-slider-price">
+                        <div class="b-promo__main-slider-container"> <a class="btn btn--primary js-addToCart " href="{{ route('basket.index') }}" data-item-id="2957">В&nbsp;корзину</a> <div class="b-promo__main-slider-price">
                                 <div class="b-promo__main-slider-currentprice">21.99 $</div>
                                 <div class="b-promo__main-slider-discount">-41% </div> </div>
                         </div>
@@ -74,7 +74,7 @@
                                 <div class="shop-item__price">
                                     <div class="shop-item__price-current">1.99 $</div>
                                     <div class="shop-item__price-discount">71%</div> </div>
-                                <a class="btn btn--primary js-addToCart " href="/basket" data-item-id="1354">В&nbsp;корзину</a></div>
+                                <a class="btn btn--primary js-addToCart " href="{{ route('basket.index') }}" data-item-id="1354">В&nbsp;корзину</a></div>
                         </div>
                         <div class="b-promo__hits-item">
                             <div class="shop-item">
@@ -83,7 +83,7 @@
                                 <div class="shop-item__price">
                                     <div class="shop-item__price-current">5.19 $</div>
                                     <div class="shop-item__price-discount">70%</div> </div>
-                                <a class="btn btn--primary js-addToCart " href="/basket" data-item-id="106">В&nbsp;корзину</a></div>
+                                <a class="btn btn--primary js-addToCart " href="{{ route('basket.index') }}" data-item-id="106">В&nbsp;корзину</a></div>
                         </div>
                         <div class="b-promo__hits-item">
                             <div class="shop-item">
@@ -92,7 +92,7 @@
                                 <div class="shop-item__price">
                                     <div class="shop-item__price-current">3.99 $</div>
                                     <div class="shop-item__price-discount">57%</div> </div>
-                                <a class="btn btn--primary js-addToCart " href="/basket" data-item-id="278">В&nbsp;корзину</a></div>
+                                <a class="btn btn--primary js-addToCart " href="{{ route('basket.index') }}" data-item-id="278">В&nbsp;корзину</a></div>
                         </div>
                         <div class="b-promo__hits-item">
                             <div class="shop-item">
@@ -101,7 +101,7 @@
                                 <div class="shop-item__price">
                                     <div class="shop-item__price-current">12.32 $</div>
                                     <div class="shop-item__price-discount">67%</div> </div>
-                                <a class="btn btn--primary js-addToCart " href="/basket" data-item-id="2396">В&nbsp;корзину</a></div>
+                                <a class="btn btn--primary js-addToCart " href="{{ route('basket.index') }}" data-item-id="2396">В&nbsp;корзину</a></div>
                         </div>
                         <div class="b-promo__hits-item">
                             <div class="shop-item">
@@ -110,7 +110,7 @@
                                 <div class="shop-item__price">
                                     <div class="shop-item__price-current">1.6 $</div>
                                     <div class="shop-item__price-discount">80%</div> </div>
-                                <a class="btn btn--primary js-addToCart " href="/basket" data-item-id="461">В&nbsp;корзину</a></div>
+                                <a class="btn btn--primary js-addToCart " href="{{ route('basket.index') }}" data-item-id="461">В&nbsp;корзину</a></div>
                         </div>
                         <div class="b-promo__hits-item">
                             <div class="shop-item">
@@ -119,7 +119,7 @@
                                 <div class="shop-item__price">
                                     <div class="shop-item__price-current">2.29 $</div>
                                     <div class="shop-item__price-discount">77%</div> </div>
-                                <a class="btn btn--primary js-addToCart " href="/basket" data-item-id="560">В&nbsp;корзину</a></div>
+                                <a class="btn btn--primary js-addToCart " href="{{ route('basket.index') }}" data-item-id="560">В&nbsp;корзину</a></div>
                         </div>
                         <div class="b-promo__hits-item">
                             <div class="shop-item">
@@ -128,7 +128,7 @@
                                 <div class="shop-item__price">
                                     <div class="shop-item__price-current">7.99 $</div>
                                     <div class="shop-item__price-discount">50%</div> </div>
-                                <a class="btn btn--primary js-addToCart " href="/basket" data-item-id="1338">В&nbsp;корзину</a></div>
+                                <a class="btn btn--primary js-addToCart " href="{{ route('basket.index') }}" data-item-id="1338">В&nbsp;корзину</a></div>
                         </div>
                         <div class="b-promo__hits-item">
                             <div class="shop-item">
@@ -137,7 +137,7 @@
                                 <div class="shop-item__price">
                                     <div class="shop-item__price-current">3.13 $</div>
                                     <div class="shop-item__price-discount">45%</div> </div>
-                                <a class="btn btn--primary js-addToCart " href="/basket" data-item-id="140">В&nbsp;корзину</a></div>
+                                <a class="btn btn--primary js-addToCart " href="{{ route('basket.index') }}" data-item-id="140">В&nbsp;корзину</a></div>
                         </div>
                         <div class="b-promo__hits-item">
                             <div class="shop-item">
@@ -146,7 +146,7 @@
                                 <div class="shop-item__price">
                                     <div class="shop-item__price-current">5.32 $</div>
                                     <div class="shop-item__price-discount">60%</div> </div>
-                                <a class="btn btn--primary js-addToCart " href="/basket" data-item-id="886">В&nbsp;корзину</a></div>
+                                <a class="btn btn--primary js-addToCart " href="{{ route('basket.index') }}" data-item-id="886">В&nbsp;корзину</a></div>
                         </div>
                         <div class="b-promo__hits-item">
                             <div class="shop-item">
@@ -155,7 +155,7 @@
                                 <div class="shop-item__price">
                                     <div class="shop-item__price-current">9.99 $</div>
                                     <div class="shop-item__price-discount">32%</div> </div>
-                                <a class="btn btn--primary js-addToCart " href="/basket" data-item-id="1399">В&nbsp;корзину</a></div>
+                                <a class="btn btn--primary js-addToCart " href="{{ route('basket.index') }}" data-item-id="1399">В&nbsp;корзину</a></div>
                         </div>
                         <div class="b-promo__hits-item">
                             <div class="shop-item">
@@ -164,7 +164,7 @@
                                 <div class="shop-item__price">
                                     <div class="shop-item__price-current">5.21 $</div>
                                     <div class="shop-item__price-discount">10%</div> </div>
-                                <a class="btn btn--primary js-addToCart " href="/basket" data-item-id="3216">В&nbsp;корзину</a></div>
+                                <a class="btn btn--primary js-addToCart " href="{{ route('basket.index') }}" data-item-id="3216">В&nbsp;корзину</a></div>
                         </div>
                         <div class="b-promo__hits-item">
                             <div class="shop-item">
@@ -173,7 +173,7 @@
                                 <div class="shop-item__price">
                                     <div class="shop-item__price-current">4.79 $</div>
                                     <div class="shop-item__price-discount">70%</div> </div>
-                                <a class="btn btn--primary js-addToCart " href="/basket" data-item-id="50">В&nbsp;корзину</a></div>
+                                <a class="btn btn--primary js-addToCart " href="{{ route('basket.index') }}" data-item-id="50">В&nbsp;корзину</a></div>
                         </div>
                         <div class="b-promo__hits-item">
                             <div class="shop-item">
@@ -182,7 +182,7 @@
                                 <div class="shop-item__price">
                                     <div class="shop-item__price-current">6.92 $</div>
                                     <div class="shop-item__price-discount">60%</div> </div>
-                                <a class="btn btn--primary js-addToCart " href="/basket" data-item-id="1955">В&nbsp;корзину</a></div>
+                                <a class="btn btn--primary js-addToCart " href="{{ route('basket.index') }}" data-item-id="1955">В&nbsp;корзину</a></div>
                         </div>
                         <div class="b-promo__hits-item">
                             <div class="shop-item">
@@ -191,7 +191,7 @@
                                 <div class="shop-item__price">
                                     <div class="shop-item__price-current">2.39 $</div>
                                     <div class="shop-item__price-discount">70%</div> </div>
-                                <a class="btn btn--primary js-addToCart " href="/basket" data-item-id="113">В&nbsp;корзину</a></div>
+                                <a class="btn btn--primary js-addToCart " href="{{ route('basket.index') }}" data-item-id="113">В&nbsp;корзину</a></div>
                         </div>
                         <div class="b-promo__hits-item">
                             <div class="shop-item">
@@ -200,7 +200,7 @@
                                 <div class="shop-item__price">
                                     <div class="shop-item__price-current">6.65 $</div>
                                     <div class="shop-item__price-discount">75%</div> </div>
-                                <a class="btn btn--primary js-addToCart " href="/basket" data-item-id="18">В&nbsp;корзину</a></div>
+                                <a class="btn btn--primary js-addToCart " href="{{ route('basket.index') }}" data-item-id="18">В&nbsp;корзину</a></div>
                         </div>
                     </div>
                 </div>

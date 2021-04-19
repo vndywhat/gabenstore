@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('home.index');
+Route::get('/gift-card', [\App\Http\Controllers\HomeController::class, 'giftCard'])->name('home.gift-card');
+Route::get('/basket', [\App\Http\Controllers\BasketController::class, 'index'])->name('basket.index');
 
 Route::group(['prefix'=> 'page'], function () {
     Route::get('/company', [\App\Http\Controllers\HomeController::class, 'company'])->name('home.company');

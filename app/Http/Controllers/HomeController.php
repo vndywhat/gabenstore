@@ -30,4 +30,9 @@ class HomeController extends Controller
     {
         return view('home.jobs');
     }
+
+    public function giftCard()
+    {
+        return view('home.gift-card');
+    }
 }

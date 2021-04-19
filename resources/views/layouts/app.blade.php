@@ -74,7 +74,7 @@
         <div class="cookie-notify__text">
             Расслабляйтесь, гуляйте по&nbsp;сайту, а&nbsp;за куками&nbsp;мы
             присмотрим! Как? Читайте в
-            <a href="/documents/agreement" target="_blank">пользовательском соглашении.</a>
+            <a href="{{ route('document.agreement') }}" target="_blank">пользовательском соглашении.</a>
         </div>
         <div class="cookie-notify__close js-close-cookie"></div>
     </div>
