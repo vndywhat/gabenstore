@@ -4,6 +4,7 @@ php:
 
 before_script:
   - composer global require fabpot/php-cs-fixer
+  - composer update
   - composer install --dev
 
 script:
