@@ -10,12 +10,79 @@
                     <a class="b-breadcrumbs__item" href="{{ route('home.index') }}">Главная</a>
                     <a class="b-breadcrumbs__item" href="{{ route('basket.index') }}">Ваша корзина</a>
                 </div>
-                <div class="b-cart b-cart--empty-cart">
-                    <div class="h4">В&nbsp;вашей корзине еще ничего нет :(</div>
-                    <a class="btn btn--primary" href="/catalog">
-                        перейти в каталог
-                    </a>
-                </div>
+                @if(true)
+                    <div class="b-cart b-cart--empty-cart">
+                        <div class="h4">В&nbsp;вашей корзине еще ничего нет :(</div>
+                        <a class="btn btn--primary" href="/catalog">
+                            перейти в каталог
+                        </a>
+                    </div>
+                @else
+                    <div class="b-content__wrapper">
+                        <div class="b-cart">
+                            <div class="b-cart__wrapper">
+                                <div class="b-cart__left-side">
+                                    <h1 class="text-center-mobile">
+                                        Мой заказ <span class="js-cart-count-items">1</span>
+                                    </h1>
+                                    <div class="b-cart__list">
+                                        <div class="shop-item-inline" data-id="1354">
+                                            <div class="shop-item-inline__image">
+                                                <a href="/game/warhammer-vermintide-2">
+                                                    <img
+                                                        src="https://static.gabestore.ru/product/BMfnXrESXap0br8SUBDpon02ZySuEuG3.jpg"
+                                                        alt="" srcset="">
+                                                </a>
+                                            </div>
+                                            <div class="shop-item-inline__content">
+                                                <div class="shop-item-inline__title">
+                                                    <div class="shop-item-inline__title-text">
+                                                        Warhammer: Vermintide 2
+                                                    </div>
+                                                    <div class="shop-item-inline__title-sub">
+                                                        <a class="js-removeFromCart btn btn--remove" href="#"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="shop-item-inline__price">
+                                                    <div class="shop-item-inline__price-item">
+                                                        <div class="shop-item-inline__price-current">149 ₽</div>
+                                                    </div>
+                                                    <div class="shop-item-inline__price-item">
+                                                        <div class="shop-item-inline__price-old">515 ₽</div>
+                                                    </div>
+                                                    <div class="shop-item-inline__price-item">
+                                                        <div class="shop-item-inline__price-discount">-71%</div>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="shop-item-inline__detail">
+                                                    <div class="shop-item-inline__detail-item">
+                                                        Регион активации:<span>Россия</span>
+                                                    </div>
+                                                    <div class="shop-item-inline__detail-item">
+                                                        Сервис активации:<span>Steam</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="b-content__wrapper"></div>
+                                </div>
+                                <div class="b-cart__right-side b-cart__right-side--sticky">
+                                    <div class="b-cart__total">
+                                        <div class="b-cart__total-main">
+                                            <div class="b-cart__total-title">Итого</div>
+                                            <div class="b-cart__total-price js-cart-price"><span>149</span>₽</div>
+                                        </div>
+                                        <button class="btn btn--primary js-modal-open" data-modal="login">
+                                            Оформить заказ
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endif
                 <div class="b-content__wrapper"></div>
             </div>
         </div>
