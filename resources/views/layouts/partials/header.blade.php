@@ -50,16 +50,22 @@
                             fill="black"></path>
                     </g>
                 </svg>
-            </a></div>
+            </a>
+        </div>
         <div class="b-header__container b-header__container--search">
             <div class="btn btn--header sm-hide js-modal-open" data-modal="menu">Каталог игр</div>
             <div id="search"></div>
         </div>
         <div class="b-header__icons b-header__container">
             <a class="b-header__icon b-header__icon--search js-modal-open" data-modal="search"></a>
-            <a class="b-header__icon b-header__icon--notification  js-modal-open sm-hide" data-modal="notification"></a>
-            <a class="b-header__icon b-header__icon--user sm-hide" href="/profile"></a>
-            <a class="b-header__icon b-header__icon--favorite sm-hide js-favorite-icon" href="/profile/favorites"></a>
+            @guest
+                <div class="btn btn--header sm-hide js-modal-open" data-modal="login">Войти</div>
+                <a class="b-header__icon b-header__icon--favorite sm-hide js-modal-open" data-modal="login"></a>
+            @else
+                <a class="b-header__icon b-header__icon--notification  js-modal-open sm-hide" data-modal="notification"></a>
+                <a class="b-header__icon b-header__icon--user sm-hide" href="/profile"></a>
+                <a class="b-header__icon b-header__icon--favorite sm-hide js-favorite-icon" href="/profile/favorites"></a>
+            @endguest
             <a class="b-header__icon b-header__icon--cart sm-hide js-cart-icon " href="/basket"></a>
 
             <div class="b-header__menu-btn js-modal-open" data-modal="menu">
@@ -68,8 +74,12 @@
                 <span></span>
             </div>
         </div>
-        <div class="b-popup js-modal hide b-popup--small" data-modal="notification" data-id="3663388"
-             data-url="/api/notifications-check">
+        @auth
+        <div
+            class="b-popup js-modal hide b-popup--small"
+            data-modal="notification" data-id="3663388"
+            data-url="/api/notifications-check"
+        >
             <span class="b-popup__overlay"></span>
             <div class="b-popup__container js-custom-scrollbar">
                 <div class="b-popup__content js-modal-content">
@@ -117,16 +127,23 @@
                 </div>
             </div>
         </div>
-        <div class="b-popup js-modal hide b-popup--menu" data-modal="menu"><span class="b-popup__overlay"></span>
+        @endauth
+        <div class="b-popup js-modal hide b-popup--menu" data-modal="menu">
+            <span class="b-popup__overlay"></span>
             <div class="b-popup__container js-custom-scrollbar">
                 <div class="b-popup__content js-modal-content">
                     <div class="b-menu__close js-menu-close"></div>
                     <div class="b-menu__icons">
+                        @guest
+                        <div class="btn btn--header js-modal-open" data-modal="login">Войти</div>
+                        <a class="b-header__icon b-header__icon--favorite js-modal-open" data-modal="login"></a>
+                        @else
                         <a class="b-header__icon b-header__icon--notification  js-modal-open"
                            data-modal="notification"></a>
                         <a class="b-header__icon b-header__icon--user" href="/profile"></a>
                         <a class="b-header__icon b-header__icon--favorite js-favorite-icon"
                            href="/profile/favorites"></a>
+                        @endguest
                         <a class="b-header__icon b-header__icon--cart js-cart-icon " href="/basket"></a>
                     </div>
                     <div class="b-menu__wrapper js-accordeon-container" data-mobile="true">
@@ -159,7 +176,9 @@
                             </ul>
                         </ul>
                         <div class="b-menu__accordeon b-menu__col">
-                            <div class="b-menu__accordeon-title js-accordeon-open" data-mobile="true">жанры</div>
+                            <div class="b-menu__accordeon-title js-accordeon-open" data-mobile="true">
+                                жанры
+                            </div>
                             <ul class="b-menu__accordeon-list">
                                 <li class="b-menu__accordeon-item">
                                     <a href="/catalog?ProductFilter%5Bgenre%5D%5B%5D=1">Экшен</a>
@@ -199,7 +218,9 @@
                             </ul>
                         </div>
                         <div class="b-menu__accordeon b-menu__col">
-                            <div class="b-menu__accordeon-title js-accordeon-open" data-mobile="true">Издатели</div>
+                            <div class="b-menu__accordeon-title js-accordeon-open" data-mobile="true">
+                                Издатели
+                            </div>
                             <ul class="b-menu__accordeon-list">
                                 <li class="b-menu__accordeon-item">
                                     <a href="/publishers/2K">2K</a>
@@ -233,7 +254,9 @@
                             </ul>
                         </div>
                         <div class="b-menu__accordeon b-menu__col">
-                            <div class="b-menu__accordeon-title js-accordeon-open" data-mobile="true">разработчики</div>
+                            <div class="b-menu__accordeon-title js-accordeon-open" data-mobile="true">
+                                разработчики
+                            </div>
                             <ul class="b-menu__accordeon-list">
                                 <li class="b-menu__accordeon-item">
                                     <a href="/developers/Gearbox-Software"> Gearbox Software</a>
@@ -270,6 +293,118 @@
                 </div>
             </div>
         </div>
+        @guest
+        <div class="b-popup js-modal hide b-popup--small" data-modal="login">
+            <span class="b-popup__overlay"></span>
+            <div class="b-popup__container js-custom-scrollbar b-popup__container--login">
+                <div class="b-popup__content js-modal-content">
+                    <div class="b-login">
+                        <div class="b-login__close js-menu-close"></div>
+                        <div class="b-lobin__wrapper">
+                            <div class="b-tabs b-tabs--center js-tab">
+                                <div class="b-tabs__head">
+                                    <div class="b-tabs__head-item js-tab-button active" data-tab-index="1">Вход</div>
+                                    <div class="b-tabs__head-item js-tab-button" data-tab-index="2">Регистрация</div>
+                                </div>
+                                <div class="b-tabs__body">
+                                    <div class="js-tab-content active" data-tab-index="1">
+                                        <form class="b-form b-form--signup js-form js-form-login">
+                                            @csrf
+                                            {{--<input type="hidden" name="LoginForm[grecaptchatoken]" value="" id="loginform-grecaptchatoken">--}}
+                                            <input type="hidden" name="referrer">
+
+                                            <div class="b-form__message js-message"></div>
+                                            <div class="b-form__input">
+                                                <input type="text" id="loginform-username" class="input input--lg input--ta-cent" name="LoginForm[username]" data-validate="email">
+                                                <label>E-mail</label>
+                                                <div class="b-form__input-message"></div>
+                                            </div>
+                                            <div class="b-form__input">
+                                                <input type="password" id="loginform-password" class="input input--lg input--ta-cent" name="LoginForm[password]" data-validate="password">
+                                                <div class="b-form__input-message"></div>
+                                                <label>Пароль</label>
+                                            </div>
+                                            <div style="font-size:10px;margin-top: -15px;margin-bottom: 20px;">
+                                                Этот сайт защищен reCAPTCHA и применяются
+                                                <a href="https://policies.google.com/privacy">Политика конфиденциальности</a> и
+                                                <a href="https://policies.google.com/terms">Условия использования</a> Google.
+                                            </div>
+                                            <button type="submit" class="btn btn--primary">авторизоваться</button>
+                                        </form>
+                                        <form id="w1" class="b-form b-form--signup js-form js-form-resetpw hide" action="/" method="post">
+                                            <input type="hidden" name="_csrf" value="SVdDRlA3MmIoOnUNFFkEFCggdQ8KQAsxChY3MgpxfQN4YTUXJQZmNQ==">
+                                            <div class="b-form__resetpassord">
+                                                <div class="b-form__resetpassord-title">Забыли пароль?</div>
+                                                <div class="b-form__resetpassord-description">Мы пришлем пароль на использованный при регистрации ящик</div>
+                                            </div>
+                                            <div class="b-form__input">
+                                                <input type="text" id="passwordresetrequestform-email" class="input input--lg input--ta-cent" name="PasswordResetRequestForm[email]" data-validate="email"> <label>E-mail</label>
+                                                <div class="b-form__input-message"></div>
+                                            </div>
+                                            <button type="submit" class="btn btn--primary">отправить</button>
+                                        </form>
+                                        <div class="b-form__resetpassord-toggle">
+                                            <p>Забыли пароль? </p><span class="js-toggle-forms">Восстановить</span>
+                                        </div>
+                                        <div class="b-autch-social">
+                                            <div class="b-autch-social__title">Войти через привязанный аккаунт</div>
+                                            <div class="b-autch-social__wrapper">
+                                                <a class="b-autch-social__item b-autch-social__item--vk" href="/login?service=vk">
+                                                    <svg width="31" height="18" viewBox="0 0 31 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M25.9588 11.2326C26.9539 12.243 28.0068 13.1939 28.9002 14.3087C29.296 14.8019 29.669 15.3119 29.953 15.8854C30.3584 16.7033 29.9923 17.6002 29.2881 17.6488L24.9138 17.6479C23.7841 17.745 22.885 17.2714 22.1271 16.4685C21.522 15.8287 20.9606 15.1452 20.3779 14.4836C20.1398 14.212 19.889 13.9564 19.5902 13.7552C18.9939 13.3519 18.4758 13.4754 18.1341 14.123C17.7859 14.7819 17.7064 15.5122 17.6732 16.2456C17.6256 17.3177 17.3146 17.5979 16.2796 17.6483C14.0682 17.7559 11.97 17.4072 10.0198 16.2483C8.29948 15.2261 6.96792 13.7833 5.80761 12.1499C3.54816 8.96562 1.81775 5.47074 0.262955 1.8755C-0.0869721 1.06581 0.169029 0.632584 1.02834 0.615782C2.456 0.587172 3.88367 0.590805 5.31134 0.614419C5.89237 0.623956 6.2768 0.969538 6.50004 1.53945C7.27154 3.51259 8.21735 5.3899 9.40256 7.13099C9.71841 7.59464 10.0408 8.05693 10.5 8.38435C11.0067 8.74582 11.3929 8.62639 11.6319 8.03831C11.7848 7.66457 11.8507 7.26495 11.8839 6.86442C11.9975 5.49254 12.0111 4.1211 11.8145 2.75467C11.6922 1.89957 11.2295 1.34736 10.4095 1.1857C9.99188 1.1035 10.053 0.942745 10.2562 0.694798C10.6087 0.266112 10.939 0.000908232 11.5991 0.000908232L16.5413 0C17.3203 0.158941 17.495 0.522234 17.6007 1.33783L17.6051 7.04698C17.5959 7.36259 17.7576 8.29807 18.3028 8.50469C18.7396 8.65455 19.0279 8.29035 19.2892 8.00289C20.4744 6.69549 21.3189 5.1524 22.0751 3.55528C22.4088 2.85094 22.6967 2.12209 22.9763 1.39187C23.1843 0.851922 23.5075 0.586264 24.0938 0.595346L28.853 0.60125C28.9932 0.60125 29.1356 0.602612 29.2746 0.627589C30.0766 0.770181 30.2964 1.12893 30.0482 1.94226C29.6577 3.22014 28.8989 4.28459 28.1571 5.35176C27.362 6.49432 26.514 7.59691 25.7268 8.74446C25.0034 9.79347 25.0606 10.3216 25.9588 11.2326Z" fill="white"></path>
+                                                    </svg>
+                                                </a>
+                                                <a class="b-autch-social__item b-autch-social__item--google" href="/login?service=google">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M23.7288 9.86667H12.2034V14.5333H18.7119C18.4407 16 17.6271 17.2 16.2712 18.1333C15.1864 18.8 13.8305 19.3333 12.2034 19.3333C9.08475 19.3333 6.37288 17.2 5.42373 14.4C5.15254 13.6 5.01695 12.8 5.01695 12C5.01695 11.2 5.15254 10.4 5.42373 9.73333C6.37288 6.93333 9.08475 4.8 12.2034 4.8C13.9661 4.8 15.5932 5.46667 16.8136 6.53333L20.339 3.06667C18.3051 1.2 15.4576 0 12.2034 0C7.45763 0 3.25424 2.66667 1.35593 6.66667C0.40678 8.26667 0 10 0 12C0 14 0.40678 15.7333 1.35593 17.3333C3.38983 21.2 7.45763 24 12.2034 24C15.4576 24 18.3051 22.9333 20.339 21.0667C22.6441 18.9333 24 15.8667 24 12.2667C23.8644 11.4667 23.8644 10.6667 23.7288 9.86667Z" fill="white"></path>
+                                                    </svg>
+                                                </a>
+                                                <a class="b-autch-social__item b-autch-social__item--steam" href="/login?service=steam">
+                                                    <svg width="28" height="22" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M15.1651 6.99241C15.1651 7.01933 15.1651 7.04625 15.1664 7.07152L11.2487 12.759C10.614 12.7302 9.97721 12.8414 9.37335 13.09C9.10716 13.1985 8.85773 13.3317 8.62369 13.4855L0.0209037 9.9463C0.020971 9.9463 -0.178159 13.2191 0.651418 15.6582L6.73311 18.166C7.03847 19.5298 7.97462 20.726 9.35576 21.3015C11.6155 22.245 14.221 21.1697 15.161 18.9104C15.4056 18.3199 15.5196 17.7005 15.5031 17.0824L21.1088 13.079C21.1541 13.0804 21.2009 13.0818 21.2462 13.0818C24.6008 13.0818 27.3274 10.3487 27.3274 6.99241C27.3274 3.63585 24.6008 0.905273 21.2462 0.905273C17.893 0.905273 15.1651 3.63585 15.1651 6.99241ZM14.2251 18.5176C13.4975 20.2632 11.4903 21.0914 9.74551 20.3648C8.9406 20.0297 8.3329 19.4158 7.98232 18.6838L9.96195 19.5037C11.2487 20.0394 12.7249 19.4296 13.2598 18.1441C13.7963 16.8572 13.1876 15.3794 11.9016 14.8438L9.85517 13.9964C10.6448 13.697 11.5425 13.686 12.3812 14.0349C13.2268 14.3865 13.8829 15.0484 14.2306 15.8945C14.5783 16.7405 14.5769 17.6744 14.2251 18.5176V18.5176ZM21.2462 11.0491C19.013 11.0491 17.1949 9.22939 17.1949 6.99241C17.1949 4.75722 19.013 2.93693 21.2462 2.93693C23.4808 2.93693 25.2989 4.75722 25.2989 6.99241C25.2989 9.22939 23.4808 11.0491 21.2462 11.0491ZM18.2105 6.98623C18.2105 5.30342 19.5737 3.93854 21.2531 3.93854C22.9338 3.93854 24.2971 5.30342 24.2971 6.98623C24.2971 8.66919 22.9338 10.0328 21.2531 10.0328C19.5737 10.0328 18.2105 8.66919 18.2105 6.98623V6.98623Z" fill="white"></path>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="js-tab-content" data-tab-index="2">
+                                        <form class="b-form b-form--signup js-form js-form-reg" method="get" action="/">
+                                            @csrf
+                                            <input type="hidden" name="referrer">
+                                            <div class="b-form__message js-message"></div>
+                                            <div class="b-form__input">
+                                                <input type="text" id="registrationform-username" class="input input--lg input--ta-cent" name="RegistrationForm[username]" data-validate="email">
+                                                <label>E-mail</label>
+                                                <div class="b-form__input-message"></div>
+                                            </div>
+                                            <div class="b-form__input">
+                                                <input type="password" id="registrationform-password" class="input input--lg input--ta-cent" name="RegistrationForm[password]" data-validate="password">
+                                                <div class="b-form__input-message"></div>
+                                                <label>Пароль</label>
+                                            </div>
+                                            <div class="b-form__input b-form__input--agreement js-form-input">
+                                                <label class="b-checkbox b-checkbox--small">
+                                                    <input class="js-agreement" type="checkbox" checked="">
+                                                    <span></span>
+                                                    <div class="b-checkbox__label">Я&nbsp;даю согласие на&nbsp;обработку моих
+                                                        <a href="/documents/agreement" target="_blank">персональных данных</a>
+                                                    </div>
+                                                </label>
+                                                <div class="b-form__input-message js-form-input-mess" style="display: none;">
+                                                    Для завершения регистрации необходимо согласиться с обработкой персональных данных
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn btn--primary">зарегистрироваться</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @endguest
         <div class="b-popup js-modal hide b-popup--change-comment" data-modal="change-comment"><span
                 class="b-popup__overlay"></span>
             <div class="b-popup__container js-custom-scrollbar">

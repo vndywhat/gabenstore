@@ -21,3 +21,11 @@ Route::group(['prefix'=> 'page'], function () {
     Route::get('/contacts', [\App\Http\Controllers\HomeController::class, 'contacts'])->name('home.contacts');
     Route::get('/jobs', [\App\Http\Controllers\HomeController::class, 'jobs'])->name('home.jobs');
 });
+
+Route::group(['prefix' => 'documents'], function () {
+    Route::get('/', [\App\Http\Controllers\DocumentController::class, 'index'])->name('document.index');
+    Route::get('/agreement', [\App\Http\Controllers\DocumentController::class, 'agreement'])->name('document.agreement');
+    Route::get('/Privacy-Policy', [\App\Http\Controllers\DocumentController::class, 'privacy'])->name('document.privacy');
+    Route::get('/offer', [\App\Http\Controllers\DocumentController::class, 'offer'])->name('document.offer');
+    Route::get('/services', [\App\Http\Controllers\DocumentController::class, 'services'])->name('document.services');
+});
