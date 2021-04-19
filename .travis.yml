@@ -48,6 +48,7 @@ before_script:
   - phpenv config-rm xdebug.ini
   - composer self-update
   - composer update --prefer-dist $DEPENDENCIES
+  - cp .env.example .env
   - php artisan key:generate --ansi
 
 script:
