@@ -33,6 +33,7 @@ cache:
 before_script:
   - phpenv config-rm xdebug.ini
   - composer self-update
+  - composer require friendsofphp/php-cs-fixer
   - composer update --prefer-dist $DEPENDENCIES
   - cp .env.example .env
   - php artisan key:generate --ansi
