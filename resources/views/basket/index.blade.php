@@ -57,10 +57,10 @@
                                                 <hr>
                                                 <div class="shop-item-inline__detail">
                                                     <div class="shop-item-inline__detail-item">
-                                                        Регион активации:<span>Россия</span>
+                                                        Регион активации: <span>Россия</span>
                                                     </div>
                                                     <div class="shop-item-inline__detail-item">
-                                                        Сервис активации:<span>Steam</span>
+                                                        Сервис активации: <span>Steam</span>
                                                     </div>
                                                 </div>
                                             </div>
