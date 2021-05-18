@@ -15,21 +15,21 @@ class CreateGamesTable extends Migration
     {
         Schema::create('games', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('activation_service_id')->nullable();
             $table->string('title');
             $table->text('about')->nullable();
             $table->enum('platform', ['PC']);
             $table->jsonb('trailers')->nullable();
             $table->jsonb('system_requirements')->nullable();
-            $table->unsignedBigInteger('activation_service_id')->nullable();
-//            $table->bigInteger('activation_service_id')->nullable();
-            $table->foreign('activation_service_id')->references('id')
-                ->on('activation_services')
-                ->nullOnDelete();
             $table->integer('price');
             $table->integer('discount')->nullable();
 
             $table->timestamp('released_at')->nullable();
             $table->timestamps();
+
+            $table->foreign('activation_service_id')->references('id')
+                ->on('activation_services')
+                ->nullOnDelete();
         });
 
     }

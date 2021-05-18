@@ -9,7 +9,7 @@
             <div class="b-background__image">
                 <img
                     class="lazyload"
-                     src="/image/IZYpOxX73vhbdFvXSzF6hY5bRHvYryyD.jpg"
+                     src="{{ \Illuminate\Support\Facades\Storage::url('image/IZYpOxX73vhbdFvXSzF6hY5bRHvYryyD.jpg') }}"
                     alt=""
                     srcset=""
                 >
@@ -60,7 +60,7 @@
                                 даже разработали несколько текстовых квестов.
                             </div>
                             <div class="b-about-grid__item-image">
-                                <img src="/image/U7AHP_b9lpiTM7BpYGro3ugGpPX--7V8.jpg">
+                                <img src="{{ \Illuminate\Support\Facades\Storage::url('image/U7AHP_b9lpiTM7BpYGro3ugGpPX--7V8.jpg') }}">
                             </div>
                         </div>
                         <div class="b-about-grid__item">
@@ -70,7 +70,7 @@
                                 с клиентами.
                             </div>
                             <div class="b-about-grid__item-image">
-                                <img src="/image/FdJTY0z3Xzpw8KkSTKJgmjz26oDtih1F.jpg">
+                                <img src="{{ \Illuminate\Support\Facades\Storage::url('image/FdJTY0z3Xzpw8KkSTKJgmjz26oDtih1F.jpg') }}">
                             </div>
                         </div>
                     </div>
@@ -130,7 +130,7 @@
                                 дождем. Было весело.
                             </div>
                             <div class="b-about-grid__item-image">
-                                <img src="/image/Pi3Lvuv1FPICyVShobxz9nVvELIuPoqU.jpeg">
+                                <img src="{{ \Illuminate\Support\Facades\Storage::url('image/Pi3Lvuv1FPICyVShobxz9nVvELIuPoqU.jpeg') }}">
                             </div>
                         </div>
                         <div class="b-about-grid__item">
@@ -139,7 +139,7 @@
                                 Fest, Старкон, GamePlanet.
                             </div>
                             <div class="b-about-grid__item-image">
-                                <img src="/image/uVHjcS8GbyappHQgQLWgPUTXVXpkzBBE.jpg">
+                                <img src="{{ \Illuminate\Support\Facades\Storage::url('image/uVHjcS8GbyappHQgQLWgPUTXVXpkzBBE.jpg') }}">
                             </div>
                         </div>
                     </div>
@@ -180,7 +180,7 @@
                                 никакого майонеза, подержать пару часов в кастрюльке.
                             </div>
                             <div class="b-about-grid__item-image">
-                                <img src="/image/_dAq6edui-iHtWLhdc5OyVeqHwVgABjG.jpg">
+                                <img src="{{ \Illuminate\Support\Facades\Storage::url('image/_dAq6edui-iHtWLhdc5OyVeqHwVgABjG.jpg') }}">
                             </div>
                         </div>
                         <div class="b-about-grid__item">
@@ -188,7 +188,7 @@
                                 сотрудники из Смоленска, Великого Новгорода, Москвы и даже Украины.
                             </div>
                             <div class="b-about-grid__item-image">
-                                <img src="/image/INSGZrjrpF62DkzQyIepETLU8-4dHidP.jpg">
+                                <img src="{{ \Illuminate\Support\Facades\Storage::url('image/INSGZrjrpF62DkzQyIepETLU8-4dHidP.jpg') }}">
                             </div>
                         </div>
                     </div>
@@ -263,40 +263,40 @@
                         </div>
                         <div class="b-about-slider__wrapper js-slider-about">
                             <div class="b-about-slider-item">
-                                <img src="/image/Xj1-OB33okHermywubySnP64aIqKbItq.jpg" alt="">
+                                <img src="{{ \Illuminate\Support\Facades\Storage::url('image/Xj1-OB33okHermywubySnP64aIqKbItq.jpg') }}" alt="">
                             </div>
                             <div class="b-about-slider-item">
-                                <img src="/image/0wVvAkCTnReZFdJw9JnHzx44H83_sjoc.jpg" alt="">
+                                <img src="{{ \Illuminate\Support\Facades\Storage::url('image/0wVvAkCTnReZFdJw9JnHzx44H83_sjoc.jpg') }}" alt="">
                             </div>
                             <div class="b-about-slider-item">
-                                <img src="/image/nlBbWYd-PG72B0Pi6b1ZRF6Tsk90VZiU.jpg" alt="">
+                                <img src="{{ \Illuminate\Support\Facades\Storage::url('image/nlBbWYd-PG72B0Pi6b1ZRF6Tsk90VZiU.jpg') }}" alt="">
                             </div>
                             <div class="b-about-slider-item">
-                                <img src="/image/2-kA2usvrW7MXHuab3rVwrkysVBxOawe.jpg" alt="">
+                                <img src="{{ \Illuminate\Support\Facades\Storage::url('image/2-kA2usvrW7MXHuab3rVwrkysVBxOawe.jpg') }}" alt="">
                             </div>
                             <div class="b-about-slider-item">
-                                <img src="/image/GORyJAZkcr7QMwsMgESHZIecRlb4PdMc.jpg" alt="">
+                                <img src="{{ \Illuminate\Support\Facades\Storage::url('image/GORyJAZkcr7QMwsMgESHZIecRlb4PdMc.jpg') }}" alt="">
                             </div>
                             <div class="b-about-slider-item">
-                                <img src="/image/6_5GThxp_QiH5F0hQMCKenVwF5bF6bK7.jpg" alt="">
+                                <img src="{{ \Illuminate\Support\Facades\Storage::url('image/6_5GThxp_QiH5F0hQMCKenVwF5bF6bK7.jpg') }}" alt="">
                             </div>
                             <div class="b-about-slider-item">
-                                <img src="/image/LXSSNjg3iaCcRRvsBS8NauXveNYGp8rw.jpg" alt="">
+                                <img src="{{ \Illuminate\Support\Facades\Storage::url('image/LXSSNjg3iaCcRRvsBS8NauXveNYGp8rw.jpg') }}" alt="">
                             </div>
                             <div class="b-about-slider-item">
-                                <img src="/image/tF9Na7ZWNOMyLkuhX2wfnulccKtISV-2.jpg" alt="">
+                                <img src="{{ \Illuminate\Support\Facades\Storage::url('image/tF9Na7ZWNOMyLkuhX2wfnulccKtISV-2.jpg') }}" alt="">
                             </div>
                             <div class="b-about-slider-item">
-                                <img src="/image/RX0AsYepyl_oKhfoXRUuQI6djFCdrvlT.jpg" alt="">
+                                <img src="{{ \Illuminate\Support\Facades\Storage::url('image/RX0AsYepyl_oKhfoXRUuQI6djFCdrvlT.jpg') }}" alt="">
                             </div>
                             <div class="b-about-slider-item">
-                                <img src="/image/3M5-3D9PWFzfl5CID0T8zRx7VZLTiXvE.jpg" alt="">
+                                <img src="{{ \Illuminate\Support\Facades\Storage::url('image/3M5-3D9PWFzfl5CID0T8zRx7VZLTiXvE.jpg') }}" alt="">
                             </div>
                             <div class="b-about-slider-item">
-                                <img src="/image/hbFZode3uzZfuC2hWd45np7ZVfKkh8HT.jpg" alt="">
+                                <img src="{{ \Illuminate\Support\Facades\Storage::url('image/hbFZode3uzZfuC2hWd45np7ZVfKkh8HT.jpg') }}" alt="">
                             </div>
                             <div class="b-about-slider-item">
-                                <img src="/image/Iw2t40ZA5c7qfBuTfmiB8kErU6zfBsZg.jpg" alt="">
+                                <img src="{{ \Illuminate\Support\Facades\Storage::url('image/Iw2t40ZA5c7qfBuTfmiB8kErU6zfBsZg.jpg') }}" alt="">
                             </div>
                         </div>
                     </div>
