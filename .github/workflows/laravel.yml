@@ -22,7 +22,7 @@ jobs:
         run: chmod -R 777 storage bootstrap/cache
 
       - name: Generate encryption key
-        run: php artisan key:generate
+        run: php artisan key:generate --ansi
 
       - name: Create temporary sqlite database
         run: |

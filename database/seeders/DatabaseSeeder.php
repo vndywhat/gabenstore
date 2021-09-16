@@ -15,6 +15,8 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
         $this->call(ActivationServiceSeeder::class);
-        \App\Models\Game::factory(100)->create();
+        $this->call(GameSeeder::class);
+        $this->call(PublisherSeeder::class);
+        $this->call(DeveloperSeeder::class);
     }
 }

@@ -49,6 +49,7 @@ class Game extends Model
      */
     protected $fillable = [
         'title',
+        'slug',
         'about',
         'platform',
         'trailers',
@@ -65,4 +66,18 @@ class Game extends Model
      * @var array
      */
     protected $guarded = [];
+
+    /**
+     * Get the game's image.
+     */
+    public function poster(): \Illuminate\Database\Eloquent\Relations\MorphOne
+    {
+        return $this->morphOne(Image::class, 'imageable')
+            ->where('images.imageable_bundle', '=', 'poster');
+    }
+
+    public function activationService(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    {
+        return $this->belongsTo(ActivationService::class);
+    }
 }

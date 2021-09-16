@@ -16,16 +16,22 @@ class ActivationServiceSeeder extends Seeder
     {
         $activationServices = [
             [
-                'name' => 'Steam',
+                'name' => 'Bethesda.net',
             ],
             [
-                'name' => 'Ubisoft Connect',
+                'name' => 'Epic Games Store',
+            ],
+            [
+                'name' => 'Origin',
             ],
             [
                 'name' => 'Rockstar Games',
             ],
             [
-                'name' => 'Epic Games Store',
+                'name' => 'Steam',
+            ],
+            [
+                'name' => 'Ubisoft Connect',
             ],
         ];
 

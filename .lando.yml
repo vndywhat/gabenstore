@@ -1,0 +1,4 @@
+name: gabenstore
+recipe: laravel
+config:
+  webroot: public

@@ -15,8 +15,10 @@ class CreateGamesTable extends Migration
     {
         Schema::create('games', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('activation_service_id')->nullable();
+            $table->foreignId('activation_service_id')->nullable()->references('id')
+                ->on('activation_services')->nullOnDelete();
             $table->string('title');
+            $table->string('slug')->unique();
             $table->text('about')->nullable();
             $table->enum('platform', ['PC']);
             $table->jsonb('trailers')->nullable();
@@ -26,10 +28,6 @@ class CreateGamesTable extends Migration
 
             $table->timestamp('released_at')->nullable();
             $table->timestamps();
-
-            $table->foreign('activation_service_id')->references('id')
-                ->on('activation_services')
-                ->nullOnDelete();
         });
 
     }
@@ -41,9 +39,6 @@ class CreateGamesTable extends Migration
      */
     public function down()
     {
-        Schema::table('games', function (Blueprint $table) {
-            $table->dropForeign('games_activation_service_id_foreign');
-        });
         Schema::dropIfExists('games');
     }
 }
